@@ -20,7 +20,8 @@
 
   /* ##Gu Random Tones of Cyan to make the background */
   --cyan: #009183;
-  --darkcyan: #00342e;
+  --few-darker-cyan:#003e38; 
+  --darkcyan: #002520;
   --lightcyan:#00ffe5;
   --verydarkgrey:#151515;
 }
@@ -226,7 +227,7 @@ h6 {
 .nav-menu .active,
 .nav-menu .active:focus{
   color: var(--text-color);
-  background: var(--low-highlight-color);
+  background: var(--few-darker-cyan);
 }
 
 /* ##Gu highlight color different from active one in navigation bar */
@@ -296,7 +297,8 @@ h6 {
 .container{
   background: #00000076;
   border-radius: 10px;
-  padding:20px;
+  padding:50px;
+  min-height: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -564,7 +566,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #45505b;
+  color: var(--text-color);
 }
 
 .skills .progress .skill .val {
@@ -573,14 +575,14 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #f2f3f5;
+  background:var(--text-color);
 }
 
 .skills .progress-bar {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #0563bb;
+  background-color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -877,6 +879,10 @@ section {
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
 }
 
+.services P {
+  color: var(--verydarkgrey);
+}
+
 .services .icon-box .icon {
   margin: 0 auto;
   width: 100px;
@@ -912,7 +918,7 @@ section {
 }
 
 .services .icon-box h4 a {
-  color: #45505b;
+  color: var(--verydarkgrey);
   transition: ease-in-out 0.3s;
 }
 
@@ -1226,7 +1232,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: var(--verydarkgrey);
+  background:#00000095;;
   color: var(--text-color);
   font-size: 14px;
   text-align: center;
