@@ -12,18 +12,20 @@
 
 /* ##Gu Varíaveis de cor adcionadas*/
 :root {
-  --primary-color: #016357; /*Used also for titles*/
-  --low-highlight-color:#74b7af;
-  --accent-color: #02bca6; /*Used for hover o highlighted text*/
+  --primary-color: #016357;
+  /*Used also for titles*/
+  --low-highlight-color: #74b7af;
+  --accent-color: #02bca6;
+  /*Used for hover o highlighted text*/
   --text-color: #ffff;
   --background-color: #151515;
 
   /* ##Gu Random Tones of Cyan to make the background */
   --cyan: #009183;
-  --few-darker-cyan:#003e38; 
+  --few-darker-cyan: #003e38;
   --darkcyan: #002520;
-  --lightcyan:#00ffe5;
-  --verydarkgrey:#151515;
+  --lightcyan: #00ffe5;
+  --verydarkgrey: #151515;
 }
 
 body {
@@ -225,7 +227,7 @@ h6 {
 
 .nav-menu a:hover,
 .nav-menu .active,
-.nav-menu .active:focus{
+.nav-menu .active:focus {
   color: var(--text-color);
   background: var(--few-darker-cyan);
 }
@@ -289,74 +291,110 @@ h6 {
   color: var(--text-color);
   background-color: var(--primary-color);
 }
+
 .mobile-nav-toggle:hover {
   background-color: var(--accent-color);
 }
 
 /* ##Gu Container box*/
-.container{
+.container {
   background: #00000076;
   border-radius: 10px;
-  padding:50px;
+  padding: 50px;
   min-height: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ##Gu Whole body background animation */
 #animatedBodyBackground {
-  background: 
+  background:
     radial-gradient(circle at 5% 10%, var(--darkcyan), transparent 20%),
     radial-gradient(circle at 10% 20%, var(--verydarkgrey), transparent 20%),
-    radial-gradient(circle at 15% 30%, var(--darkcyan), transparent 20%),
+    radial-gradient(circle at 15% 30%, var(--cyan), transparent 20%),
     radial-gradient(circle at 20% 40%, var(--verydarkgrey), transparent 20%),
     radial-gradient(circle at 25% 50%, var(--darkcyan), transparent 20%),
     radial-gradient(circle at 30% 60%, var(--verydarkgrey), transparent 20%),
-    radial-gradient(circle at 35% 70%, var(--darkcyan), transparent 20%),
+    radial-gradient(circle at 35% 70%, var(--cyan), transparent 20%),
     radial-gradient(circle at 40% 80%, var(--verydarkgrey), transparent 20%),
     radial-gradient(circle at 45% 90%, var(--darkcyan), transparent 20%),
     radial-gradient(circle at 50% 100%, var(--verydarkgrey), transparent 20%),
-    radial-gradient(circle at 55% 10%, var(--darkcyan), transparent 20%),
+    radial-gradient(circle at 55% 10%, var(--cyan), transparent 20%),
     radial-gradient(circle at 60% 20%, var(--verydarkgrey), transparent 20%),
     radial-gradient(circle at 65% 30%, var(--darkcyan), transparent 20%),
     radial-gradient(circle at 70% 40%, var(--verydarkgrey), transparent 20%),
-    radial-gradient(circle at 75% 50%, var(--darkcyan), transparent 20%),
+    radial-gradient(circle at 75% 50%, var(--cyan), transparent 20%),
     radial-gradient(circle at 80% 60%, var(--verydarkgrey), transparent 20%),
     radial-gradient(circle at 85% 70%, var(--darkcyan), transparent 20%),
     radial-gradient(circle at 90% 80%, var(--verydarkgrey), transparent 20%),
-    radial-gradient(circle at 95% 90%, var(--darkcyan), transparent 20%),
+    radial-gradient(circle at 95% 90%, var(--cyan), transparent 20%),
     radial-gradient(circle at 100% 100%, var(--verydarkgrey), transparent 20%),
     black;
   background-size: 200% 200%;
   animation: gradient-animation 10s infinite linear;
 }
+
 @keyframes gradient-animation {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 25% 75%, 75% 25%, 25% 25%, 75% 75%, 0% 0%, 100% 100%, 0% 100%, 100% 0%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
   }
+
   25% {
     background-position: 25% 25%, 75% 75%, 25% 75%, 75% 25%, 75% 75%, 25% 25%, 75% 25%, 25% 75%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 25% 25%, 75% 75%, 25% 75%, 75% 25%, 75% 75%, 25% 25%, 75% 25%, 25% 75%;
   }
+
   50% {
     background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0% 0%, 100% 100%, 0% 100%, 100% 0%, 75% 25%, 25% 75%, 75% 75%, 25% 25%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 0% 0%, 100% 100%, 0% 100%, 100% 0%;
   }
+
   75% {
     background-position: 75% 75%, 25% 25%, 75% 25%, 25% 75%, 25% 25%, 75% 75%, 25% 75%, 75% 25%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 75% 75%, 25% 25%, 75% 25%, 25% 75%, 25% 25%, 75% 75%, 25% 75%, 75% 25%;
   }
 }
+
 /* ##Gu End Whole body background animation */
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 
-  @media (min-width: 992px) {
-    #hero {
-      padding-left: 70px;
-    }
-  } 
+@media (min-width: 992px) {
+  #hero {
+    padding-left: 70px;
+  }
+}
 
-  /* ##Gu Image behind the hero section currently not being used but left here because it's cool and can be used on a future*/
-  /* #hero:before {
+svg {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color)
+}
+
+/* @keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+  }
+
+  50% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+  }
+}
+
+.neonText {
+  font-size: 3em;
+  color: #fff;
+  text-align: center;
+  animation: neonGlow 1.5s infinite alternate;
+  font-family: Arial, sans-serif;
+} */
+
+/* ##Gu Image behind the hero section currently not being used but left here because it's cool and can be used on a future*/
+/* #hero:before {
     content: "";
     background: rgba(11, 11, 11, 0.8); 
     position: absolute;
@@ -375,7 +413,7 @@ h6 {
 }
 
 #hero p {
-  color:  var(--text-color);
+  color: var(--text-color);
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
@@ -399,9 +437,30 @@ h6 {
   transition: 0.3s;
 }
 
-#hero .social-links a:hover {
+#hero .social-links a:hover{
   color: var(--accent-color);
 }
+
+/*#region My SVG for Lattes style */
+#hero .social-links a svg,
+#hero .social-links a svg * {
+  width: 24px;
+  /* Adjust the size of the SVG */
+  height: 24px;
+  /* Adjust the size of the SVG */
+  fill: var(--text-color);
+  /* Set the color of the SVG */
+  transition: fill 0.3s;
+  /* Add transition for the fill color */
+}
+
+#hero .social-links a:hover svg,
+#hero .social-links a:hover svg * {
+  fill: var(--accent-color);
+  /* Change the color on hover */
+}
+
+/*#endregion My SVG for Lattes style */
 
 @media (max-width: 992px) {
   #hero {
@@ -440,11 +499,11 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color:var(--low-highlight-color);
+  color: var(--low-highlight-color);
 }
 
 /* ##GU Line Effect before section tittles */
- .section-title h2::before {
+.section-title h2::before {
   content: "";
   position: absolute;
   display: block;
@@ -455,7 +514,7 @@ section {
   left: calc(50% - 60px);
 }
 
- .section-title h2::after {
+.section-title h2::after {
   content: "";
   position: absolute;
   display: block;
@@ -526,7 +585,7 @@ section {
   transform: translateX(-50%);
   font-size: 24px;
   background: var(--primary-color);
-  color:var(--text-color);
+  color: var(--text-color);
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -575,7 +634,7 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background:var(--text-color);
+  background: var(--text-color);
 }
 
 .skills .progress-bar {
@@ -1021,25 +1080,23 @@ section {
   text-align: center;
 }
 
-.testimonials .testimonial-item .testimonial-img{
-  width:150px; 
-  height:150px;
+.testimonials .testimonial-item .testimonial-img {
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--low-highlight-color);
   margin: 0 auto;
 }
 
-.tesim
-
-.testimonials .testimonial-item h3 {
+.tesim .testimonials .testimonial-item h3 {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: var(--low-highlight-color);
 }
 
-.testimonials .testimonial-item h4{
+.testimonials .testimonial-item h4 {
   font-size: 14px;
   color: var(--low-highlight-color);
   margin: 0 0 15px 0;
@@ -1232,7 +1289,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background:#00000095;;
+  background: #00000095;
+  ;
   color: var(--text-color);
   font-size: 14px;
   text-align: center;
