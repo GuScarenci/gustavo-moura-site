@@ -19,6 +19,8 @@
   /*Used for hover o highlighted text*/
   --text-color: #ffff;
   --background-color: #151515;
+  --background-transparent-color: #15151590;
+
 
   /* ##Gu Random Tones of Cyan to make the background */
   --cyan: #009183;
@@ -52,6 +54,41 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+/* #region Floating button for  dark and light theme. */
+.theme-toggle,
+.music-toggle {
+  position: fixed;
+  right: 15px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.theme-toggle:hover,
+.music-toggle:hover {
+  background: var(--accent-color);
+}
+
+.theme-toggle {
+  bottom: 70px;
+}
+
+.music-toggle {
+  bottom: 20px;
+  /* Adjusted for spacing directly below the theme toggle button */
+}
+
+/* #endregion Floating button for  dark and light theme. */
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -60,7 +97,7 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: 15px;
+  bottom: 120px;
   z-index: 996;
   background: var(--primary-color);
   width: 40px;
@@ -298,7 +335,7 @@ h6 {
 
 /* ##Gu Container box*/
 .container {
-  background: #00000076;
+  background: var(--background-transparent-color);
   border-radius: 10px;
   padding: 50px;
   min-height: 600px;
@@ -328,7 +365,7 @@ h6 {
     radial-gradient(circle at 90% 80%, var(--verydarkgrey), transparent 20%),
     radial-gradient(circle at 95% 90%, var(--cyan), transparent 20%),
     radial-gradient(circle at 100% 100%, var(--verydarkgrey), transparent 20%),
-    black;
+    var(--background-color);
   background-size: 200% 200%;
   animation: gradient-animation 10s infinite linear;
 }
@@ -363,12 +400,6 @@ h6 {
   #hero {
     padding-left: 70px;
   }
-}
-
-svg {
-  width: 24px;
-  height: 24px;
-  color: var(--text-color)
 }
 
 /* @keyframes neonGlow {
@@ -437,7 +468,7 @@ svg {
   transition: 0.3s;
 }
 
-#hero .social-links a:hover{
+#hero .social-links a:hover {
   color: var(--accent-color);
 }
 
@@ -1289,7 +1320,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #00000095;
+  background: var(--background-transparent-color);
   ;
   color: var(--text-color);
   font-size: 14px;
@@ -1331,6 +1362,12 @@ section {
   height: 36px;
   transition: 0.3s;
 }
+#footer svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-color)
+}
+
 
 #footer .social-links a:hover {
   background: var(--accent-color);
